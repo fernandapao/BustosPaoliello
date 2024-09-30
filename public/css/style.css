@@ -1,0 +1,64 @@
+html, body, #app {
+    height: 100%;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 56px 1fr 100px;
+}
+
+.navmodificado{
+    background-color: #FEBB02;
+    color: #113C73;
+    height: 70px;
+    font-weight: bolder;
+}
+
+.separador {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px; /* Opcional */
+}
+
+.left {
+    padding-left: 3rem;
+}
+
+.right {
+    padding-right: 3rem;
+}
+
+h1 {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.logo {
+    margin-top: 3rem;
+    width: 75%;
+}
+
+.logo-nav {
+    max-width: 150px;
+}
+
+.texto {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #113C73;
+    color: whitesmoke;
+}
+
+.footer p {
+    margin: 0;
+}
