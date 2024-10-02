@@ -16,4 +16,7 @@ Route::get('/novedades/{id}', [\App\Http\Controllers\NewsController::class, 'sho
 Route::get('/admin/novedades', [\App\Http\Controllers\NewsController::class, 'admin_novedades']);
 Route::get('/admin/novedades/publicar', [\App\Http\Controllers\NewsController::class, 'create']);
 
-Route::get('/contactanos', [\App\Http\Controllers\ContactUsController::class, 'index']);
+use App\Http\Controllers\ContactUsController;
+
+Route::get('/contactanos', [ContactUsController::class, 'index'])->name('contactanos'); // Método que muestra el formulario
+Route::post('/contactanos', [ContactUsController::class, 'contacto']); // Método que maneja el envío del formulario
