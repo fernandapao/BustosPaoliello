@@ -62,3 +62,16 @@ img {
 .footer p {
     margin: 0;
 }
+
+.logo-nav {
+    width: 100%;
+    max-width: 250px; /* Ajusta el tamaño máximo del logo */
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .logo-nav {
+        max-width: 150px; /* Tamaño más pequeño en pantallas móviles */
+    }
+}
