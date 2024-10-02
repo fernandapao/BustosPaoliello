@@ -7,10 +7,12 @@
 
     <title>Airport Assistanc - <?= $title; ?></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    <link rel="shortcut icon" href="img/aero-asist-icon.png"/>
+    <link rel="shortcut icon" href="{{ asset('img/aero-asist-icon.png') }}" />
+
 
 </head>
 
@@ -19,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navmodificado separador">
             <div class="container-fluid">
                 <div class="left">
-                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="img/aero-asist-02.png" alt="logo de AeroAsist" class="logo-nav"></a>
+                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="{{ asset('img/aero-asist-02.png') }}" alt="logo de AeroAsist" class="logo-nav"></a>
                 </div>
                 <div class="right">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,8 +35,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= url('quienes-somos') ?>">Quienes somos</a>
                             </li>
-
-                             <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" href="<?= url('servicios') ?>">Servicios</a>
                             </li>
                             <li class="nav-item">
@@ -46,7 +47,6 @@
                             <li class="nav-item">
                                 <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Ingresar</a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,13 @@
         </nav>
 
 
-        <main class="container p-4">
+        <main>
+            <div class="container">
+                @if(session()->has('feedback.message'))
+                <p class="alert alert-success mt-3">{{ session()->get('feedback.message') }}</p>
+                @endif
+            </div>
+
 
             <?= $slot; ?>
 
@@ -66,7 +72,7 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

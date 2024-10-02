@@ -19,6 +19,5 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(NovedadSeeder::class);
-        $this->call(serviciosSeeder::class);
     }
 }
