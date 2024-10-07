@@ -19,7 +19,7 @@
         <div class="alert alert-danger mt-3">Hay errores en los datos ingresados</div>
         @endif
 
-        <form action="{{ url('admin/novedades/publicar')}}" method="post">
+        <form action="{{ route('novedades.guardar') }}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="titulo" class="form-label">Título</label>
