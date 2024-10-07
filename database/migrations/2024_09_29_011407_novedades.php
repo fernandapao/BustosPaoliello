@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('fecha_publicacion');
             $table->text('info_abreviada');
             $table->text('descripcion');
+            $table->text('categoria');
             $table->timestamps();
         });
     }

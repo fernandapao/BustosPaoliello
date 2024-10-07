@@ -23,7 +23,7 @@ class NovedadSeeder extends Seeder
                 'fecha_publicacion' => '2024-09-27',
                 'categoria' => 'Funcionalidades',
                 'info_abreviada' => '¡Descubrí la forma más fácil de moverte en el aeropuerto con nuestra nueva app! Con solo ingresar tu número de vuelo, podrás buscar rápidamente lugares dentro del aeropuerto, desde restaurantes hasta tiendas.',
-                'descripcion' => 'Además, si necesitáas asistencia, ¡Podés solicitarla al instante! No te pierdas de nada en tu próximo viaje. Descárgala ahora en Android y simplifica tu experiencia de viaje. ¡Tu aventura comienza aquí! ✈️📱',
+                'descripcion' => 'Además, si necesitas asistencia, ¡Podés solicitarla al instante! No te pierdas de nada en tu próximo viaje. Descárgala ahora en Android y simplifica tu experiencia de viaje. ¡Tu aventura comienza aquí! ✈️📱',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
